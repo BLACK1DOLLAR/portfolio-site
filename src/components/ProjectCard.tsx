@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
+import { withBasePath } from "@/lib/basePath";
 import MagneticButton from "./MagneticButton";
 
 export default function ProjectCard({ project, i }: { project: Project; i: number }) {
@@ -25,7 +26,7 @@ export default function ProjectCard({ project, i }: { project: Project; i: numbe
           className={`relative h-72 md:h-80 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
         >
           <Image
-            src={project.image}
+            src={withBasePath(project.image)}
             alt={`Screenshot of the ${project.name} homepage`}
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
