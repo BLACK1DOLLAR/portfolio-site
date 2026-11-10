@@ -128,21 +128,6 @@ a,
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #0f172a;
-  color: #e2e8f0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
 .animate-marquee {
   animation: marquee 28s linear infinite;
 }
