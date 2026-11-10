@@ -1,7 +1,7 @@
 import MagneticButton from "./MagneticButton";
 import GradientSeam from "./GradientSeam";
 
-const EMAIL = "augustine200729@gmail.com";
+const EMAIL = "blackdollarcodes@protonmail.com";
 const WHATSAPP_DIGITS = "2348147590814";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi Sylvanus, I'd like to talk about building a site."
@@ -37,13 +37,16 @@ export default function Contact() {
             <MagneticButton
               as="a"
               href={`mailto:${EMAIL}`}
-              className="px-8 py-5 bg-fg text-ink text-sm uppercase tracking-widest hover:bg-accent hover:text-fg transition-colors"
+              className="max-w-full break-all px-5 sm:px-8 py-5 bg-fg text-ink text-xs sm:text-sm uppercase tracking-widest hover:bg-accent hover:text-fg transition-colors"
             >
               {EMAIL}
             </MagneticButton>
           </div>
           <p className="text-fg-dim text-sm max-w-md">
             Send a brief — what your business sells, and who buys it. I&apos;ll reply with next steps.
+          </p>
+          <p className="text-fg-dim text-sm max-w-md border-t border-line pt-6">
+            Open to full-stack, AI engineering, and contract/full-time remote roles worldwide.
           </p>
         </div>
       </div>

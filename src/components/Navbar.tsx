@@ -7,6 +7,8 @@ import MagneticButton from "./MagneticButton";
 const links = [
   { label: "Work", href: "#work" },
   { label: "Process", href: "#process" },
+  { label: "Systems", href: "#systems" },
+  { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -60,7 +62,7 @@ export default function Navbar() {
             </span>
           </a>
 
-          <ul className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest text-fg-dim">
+          <ul className="hidden md:flex items-center gap-5 lg:gap-8 text-xs lg:text-sm uppercase tracking-widest text-fg-dim">
             {links.map((l) => (
               <li key={l.href}>
                 <a href={l.href} data-cursor-hover className="hover:text-fg transition-colors">
@@ -73,7 +75,7 @@ export default function Navbar() {
           <MagneticButton
             as="a"
             href="#contact"
-            className={`hidden md:inline-flex px-5 py-2.5 text-xs uppercase tracking-widest border ${
+            className={`hidden lg:inline-flex px-5 py-2.5 text-xs uppercase tracking-widest border ${
               scrolled ? "border-fg/30" : "border-fg/50"
             } hover:bg-fg hover:text-ink transition-colors`}
           >

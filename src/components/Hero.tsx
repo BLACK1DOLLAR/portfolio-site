@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative min-h-[78svh] md:h-[100svh] w-full overflow-hidden grain">
+    <section id="top" className="relative min-h-[78svh] md:min-h-[100svh] w-full overflow-hidden grain">
       <AnimatePresence mode="sync">
         <motion.div
           key={index}
@@ -37,7 +37,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg/40" />
 
-      <div className="relative z-10 md:h-full flex flex-col justify-center md:justify-end px-6 md:px-10 pt-28 pb-16 md:pt-0 md:pb-28">
+      <div className="relative z-10 md:min-h-[100svh] flex flex-col justify-center md:justify-end px-6 md:px-10 pt-28 pb-16 md:pt-36 md:pb-28">
         <span className="uppercase tracking-[0.3em] text-xs text-fg-dim mb-6">
           Full-Stack Web Developer
         </span>
@@ -49,6 +49,11 @@ export default function Hero() {
           <br />
           products.
         </h1>
+
+        <p className="mt-8 max-w-2xl text-fg-dim text-base md:text-lg leading-relaxed">
+          Full-Stack Developer &amp; AI Systems Engineer specializing in Node.js, React,
+          PostgreSQL, LLM pipelines, and resilient backend microservices.
+        </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-6">
           <MagneticButton
