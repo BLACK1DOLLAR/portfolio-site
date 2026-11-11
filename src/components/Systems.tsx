@@ -9,7 +9,7 @@ const systems = [
     category: "AI / ML Engineering",
     name: "Ranvier AI",
     summary:
-      "AI-powered medical study copilot featuring backend LLM inference, structured RAG context retrieval over medical textbooks, and Redis caching to achieve sub-second response latency.",
+      "WhatsApp-accessible medical study copilot: textbook summaries, detailed explanations and multiple-choice drills, served by backend LLM inference with structured RAG retrieval over medical textbooks and a Redis cache for sub-second responses.",
     stats: [
       ["Sub-second", "Response latency"],
       ["RAG", "Over medical textbooks"],
@@ -20,12 +20,12 @@ const systems = [
   {
     index: "02",
     category: "Full-Stack Web Architecture",
-    name: "COOUMSA Business Hub & Regional Digital Portals",
+    name: "NIMSA South East Regional Portal & Voting Engine",
     summary:
-      "Enterprise web platforms and voting/commerce infrastructure serving 19 student regional chapters, featuring Paystack payment gateways, live automated leaderboards, and role-based access security.",
+      "The official regional portal for the Nigerian Medical Students' Association, South East, across 19 university chapters, with Paystack-backed member verification and dues collection, and a live-election voting engine with real-time leaderboards.",
     stats: [
-      ["19", "Regional chapters"],
-      ["Live", "Automated leaderboards"],
+      ["50,000+", "Verified votes processed"],
+      ["19", "University chapters"],
     ],
     tags: ["Node.js", "Express", "React", "PostgreSQL", "EJS", "Paystack API", "Render"],
     gradient: "from-[#132018] via-[#0d1612] to-[#08080a]",
@@ -35,12 +35,12 @@ const systems = [
     category: "Gameplay & Interactive Engineering",
     name: "Interactive 3D Systems & Game Engines",
     summary:
-      "Production-ready 3D game prototypes engineered in C# and Unity, featuring custom character control scripts, event-driven state machines, and physics optimization.",
+      "Three 3D game prototypes in Unity with custom C# scripts for character controllers, state machines, combat mechanics and physics, plus scene organisation, input mapping and event-driven game logic.",
     stats: [
-      ["C#", "Unity 3D"],
+      ["3", "Unity 3D prototypes"],
       ["Event-driven", "State machines"],
     ],
-    tags: ["C#", "Unity 3D", "Git", "Physics Pipelines"],
+    tags: ["C#", "Unity 3D", "Git", "Physics Systems"],
     gradient: "from-[#2a1710] via-[#170f0c] to-[#08080a]",
   },
 ];

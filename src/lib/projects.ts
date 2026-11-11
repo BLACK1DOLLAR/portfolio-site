@@ -8,11 +8,14 @@ export type Project = {
   gradient: string;
   image: string;
   index: string;
+  /** "demo" = concept build for no real business; "client" = built for a real organisation. */
+  kind?: "demo" | "client";
 };
 
 export const projects: Project[] = [
   {
     slug: "pharmacy-demo-1",
+    kind: "demo",
     name: "Cedar Pharmacy — Consult",
     category: "Pharmacy",
     description:
@@ -25,6 +28,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pharmacy-demo-2",
+    kind: "demo",
     name: "Cedar Pharmacy — Storefront",
     category: "Pharmacy",
     description:
@@ -37,6 +41,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gadgets-demo",
+    kind: "demo",
     name: "Volt & Co. Gadgets",
     category: "Electronics",
     description:
@@ -49,6 +54,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gadgets-demo-premium",
+    kind: "demo",
     name: "Volt & Co. — Premium",
     category: "Electronics",
     description:
@@ -61,6 +67,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beauty-demo-premium",
+    kind: "demo",
     name: "Bloom Room Studio — Premium",
     category: "Beauty",
     description:
@@ -73,6 +80,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beauty-demo",
+    kind: "demo",
     name: "Bloom Room Studio",
     category: "Beauty",
     description:
@@ -85,6 +93,7 @@ export const projects: Project[] = [
   },
   {
     slug: "nimsa-southeast",
+    kind: "client",
     name: "NiMSA South East Region",
     category: "Organisation",
     description:
@@ -97,6 +106,7 @@ export const projects: Project[] = [
   },
   {
     slug: "nimsa-pageantry",
+    kind: "client",
     name: "NIMSA South East Pageantry",
     category: "Organisation",
     description:

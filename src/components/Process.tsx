@@ -7,7 +7,7 @@ const steps = [
   {
     n: "01",
     title: "Discovery call",
-    body: "We talk through what the business actually needs — products, services, the one action you want a visitor to take. No templates pitched until I understand the client.",
+    body: "I talk through what the business actually needs — products, services, the one action you want a visitor to take. No templates pitched until I understand the client.",
   },
   {
     n: "02",
@@ -17,7 +17,7 @@ const steps = [
   {
     n: "03",
     title: "Build & preview",
-    body: "A live preview link goes out within days, not weeks. We test every button, every link, on a real phone, before anything is called finished.",
+    body: "A live preview link goes out within days, not weeks. I test every button, every link, on a real phone, before anything is called finished.",
   },
   {
     n: "04",

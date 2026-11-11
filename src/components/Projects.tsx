@@ -22,7 +22,7 @@ export default function Projects() {
               Client Sites
             </span>
             <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-2xl text-balance">
-              Eight live builds, shipped for real businesses.
+              Demo builds &amp; client sites.
             </h2>
           </div>
 

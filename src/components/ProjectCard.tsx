@@ -36,9 +36,22 @@ export default function ProjectCard({ project, i }: { project: Project; i: numbe
           <span className="absolute top-5 left-5 font-display text-6xl text-white/20 drop-shadow-lg">
             {project.index}
           </span>
-          <span className="absolute top-5 right-5 text-[10px] uppercase tracking-widest px-3 py-1 border border-white/40 text-white bg-black/30 backdrop-blur-sm">
-            {project.category}
-          </span>
+          <div className="absolute top-5 right-5 flex items-center gap-2">
+            {project.kind && (
+              <span
+                className={`text-[10px] uppercase tracking-widest px-3 py-1 border bg-black/50 backdrop-blur-sm ${
+                  project.kind === "client"
+                    ? "border-accent-2/70 text-accent-2"
+                    : "border-white/40 text-white"
+                }`}
+              >
+                {project.kind === "client" ? "Client" : "Demo"}
+              </span>
+            )}
+            <span className="text-[10px] uppercase tracking-widest px-3 py-1 border border-white/40 text-white bg-black/30 backdrop-blur-sm">
+              {project.category}
+            </span>
+          </div>
           <div className="absolute bottom-5 right-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 text-xs uppercase tracking-widest flex items-center gap-2 text-white">
             Visit live site <span aria-hidden>↗</span>
           </div>
