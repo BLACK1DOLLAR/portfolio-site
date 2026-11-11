@@ -2,8 +2,23 @@
 
 import { motion } from "framer-motion";
 import GradientSeam from "./GradientSeam";
+import { withBasePath } from "@/lib/basePath";
 
-const systems = [
+type SystemLink = { label: "Repo" | "Demo" | "Write-up"; href: string };
+
+type System = {
+  index: string;
+  category: string;
+  name: string;
+  summary: string;
+  stats: [string, string][];
+  tags: string[];
+  gradient: string;
+  /** Rendered only when href is non-empty. */
+  links?: SystemLink[];
+};
+
+const systems: System[] = [
   {
     index: "01",
     category: "AI / ML Engineering",
@@ -16,6 +31,11 @@ const systems = [
     ],
     tags: ["Node.js", "Express", "Python", "Vector DBs", "Redis", "OpenAI API", "Webhooks"],
     gradient: "from-[#1c1330] via-[#0f0c1e] to-[#08080a]",
+    links: [
+      { label: "Repo", href: "" }, // TODO: Ranvier AI repo URL (or leave empty if private)
+      { label: "Demo", href: "" }, // TODO: Ranvier AI demo URL (e.g. a wa.me link or video)
+      { label: "Write-up", href: withBasePath("/case-studies/ranvier-ai/") },
+    ],
   },
   {
     index: "02",
@@ -29,6 +49,11 @@ const systems = [
     ],
     tags: ["Node.js", "Express", "React", "PostgreSQL", "EJS", "Paystack API", "Render"],
     gradient: "from-[#132018] via-[#0d1612] to-[#08080a]",
+    links: [
+      { label: "Repo", href: "" }, // TODO: portal repo URL (or leave empty if private)
+      { label: "Demo", href: "" }, // TODO: live portal URL — confirm whether https://nimsa-se.onrender.com/ is this portal
+      { label: "Write-up", href: "" }, // TODO: write-up URL
+    ],
   },
   {
     index: "03",
@@ -42,6 +67,11 @@ const systems = [
     ],
     tags: ["C#", "Unity 3D", "Git", "Physics Systems"],
     gradient: "from-[#2a1710] via-[#170f0c] to-[#08080a]",
+    links: [
+      { label: "Repo", href: "" }, // TODO: Unity prototypes repo URL
+      { label: "Demo", href: "" }, // TODO: gameplay video / WebGL build URL
+      { label: "Write-up", href: "" }, // TODO: write-up URL
+    ],
   },
 ];
 
@@ -98,6 +128,30 @@ export default function Systems() {
                     </div>
                   ))}
                 </div>
+
+                {s.links?.some((l) => l.href) && (
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 mb-6">
+                    {s.links
+                      .filter((l) => l.href)
+                      .map((l) => {
+                        const external = /^https?:\/\//.test(l.href);
+                        return (
+                          <a
+                            key={l.label}
+                            href={l.href}
+                            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                            data-cursor-hover
+                            aria-label={`${s.name}: ${l.label}`}
+                            className="group/link inline-flex min-h-11 items-center text-xs uppercase tracking-widest hover:text-accent transition-colors"
+                          >
+                            <span className="border-b border-fg/40 pb-1 group-hover/link:border-accent transition-colors">
+                              {l.label} <span aria-hidden>↗</span>
+                            </span>
+                          </a>
+                        );
+                      })}
+                  </div>
+                )}
 
                 <div className="mt-auto flex flex-wrap gap-2">
                   {s.tags.map((tag) => (
