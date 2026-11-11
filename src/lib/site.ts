@@ -12,5 +12,4 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/in/augustine-ikechukwu-sylvanus-86215844a";
 export const WHATSAPP_DIGITS = "2348147590814";
 
-// TODO: add public/resume.pdf — this link 404s until the file exists.
 export const RESUME_PATH = "/resume.pdf";

@@ -71,7 +71,6 @@ export default function Contact() {
             >
               LinkedIn ↗
             </MagneticButton>
-            {/* TODO: add public/resume.pdf — this link 404s until the file exists. */}
             <a
               href={withBasePath(RESUME_PATH)}
               download
