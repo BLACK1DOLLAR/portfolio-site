@@ -45,6 +45,12 @@ body {
   width: 100%;
 }
 
+/* visible keyboard focus everywhere (mouse clicks don't trigger :focus-visible) */
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
 ::selection {
   background: var(--accent);
   color: var(--ink);

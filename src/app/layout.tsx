@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 
 const display = Bricolage_Grotesque({
   variable: "--font-display",
@@ -31,11 +32,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-fg">
-        <SmoothScroll />
-        <CustomCursor />
-        <Navbar />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <SmoothScroll />
+          <CustomCursor />
+          <Navbar />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

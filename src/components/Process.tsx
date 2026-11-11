@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 
 const steps = [
   {
@@ -34,16 +34,17 @@ function StackCard({ step, i }: { step: (typeof steps)[number]; i: number }) {
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
   const opacity = useTransform(scrollYProgress, [0.7, 1], [1, 0.5]);
+  const reduceMotion = useReducedMotion();
 
   return (
     <div
       ref={ref}
-      className="sticky top-0 h-[100svh] flex items-center px-6 md:px-10"
+      className="sticky top-0 min-h-[70svh] flex items-center py-8 px-6 md:px-10"
       style={{ top: `${i * 12}px` }}
     >
       <motion.div
-        style={{ scale, opacity }}
-        className="w-full max-w-5xl mx-auto border border-line bg-bg-alt p-10 md:p-16 grid md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start shadow-[0_40px_80px_-40px_rgba(0,0,0,0.6)]"
+        style={reduceMotion ? undefined : { scale, opacity }}
+        className="w-full max-w-5xl mx-auto border border-line bg-bg-alt p-8 md:p-16 grid md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start shadow-[0_40px_80px_-40px_rgba(0,0,0,0.6)]"
       >
         <span className="font-display text-7xl md:text-8xl text-accent">{step.n}</span>
         <div>

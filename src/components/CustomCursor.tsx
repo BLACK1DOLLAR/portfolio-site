@@ -7,7 +7,8 @@ export default function CustomCursor() {
 
   useEffect(() => {
     const dot = dotRef.current;
-    if (!dot) return;
+    // No cursor on touch screens: skip the listeners and the rAF loop entirely.
+    if (!dot || window.matchMedia("(pointer: coarse)").matches) return;
 
     let x = 0;
     let y = 0;

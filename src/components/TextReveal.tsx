@@ -1,7 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 
 function Word({
   children,
@@ -12,10 +18,11 @@ function Word({
   progress: MotionValue<number>;
   range: [number, number];
 }) {
-  const opacity = useTransform(progress, range, [0.2, 1]);
+  const opacity = useTransform(progress, range, [0.35, 1]);
+  const reduceMotion = useReducedMotion();
   return (
     <span className="relative mr-[0.25em] inline-block">
-      <motion.span style={{ opacity }}>{children}</motion.span>
+      <motion.span style={{ opacity: reduceMotion ? 1 : opacity }}>{children}</motion.span>
     </span>
   );
 }

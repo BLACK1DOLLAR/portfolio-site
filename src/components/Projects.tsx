@@ -26,13 +26,15 @@ export default function Projects() {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div role="group" aria-label="Filter projects by category" className="flex flex-wrap gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
+                type="button"
+                aria-pressed={active === cat}
                 data-cursor-hover
                 onClick={() => setActive(cat)}
-                className={`px-4 py-2 text-xs uppercase tracking-widest border transition-colors ${
+                className={`min-h-11 px-4 py-2 text-xs uppercase tracking-widest border transition-colors ${
                   active === cat
                     ? "border-accent bg-accent text-ink"
                     : "border-line text-fg-dim hover:text-fg hover:border-fg/40"

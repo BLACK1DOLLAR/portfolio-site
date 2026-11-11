@@ -48,7 +48,7 @@ export default function Navbar() {
         }}
         className="fixed top-0 left-0 right-0 z-50 border-b overflow-x-hidden"
       >
-        <nav className="flex items-center justify-between gap-3 px-5 sm:px-6 md:px-10 py-4 md:py-5">
+        <nav aria-label="Primary" className="flex items-center justify-between gap-3 px-5 sm:px-6 md:px-10 py-4 md:py-5">
           <a
             href={withBasePath("/#top")}
             data-cursor-hover
@@ -88,6 +88,7 @@ export default function Navbar() {
             data-cursor-hover
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             onClick={() => setMenuOpen((v) => !v)}
             className="md:hidden relative z-50 flex shrink-0 flex-col justify-center items-end gap-1.5 w-11 h-11 -mr-2"
           >
@@ -112,26 +113,29 @@ export default function Navbar() {
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
+            id="mobile-menu"
             className="fixed inset-0 z-40 bg-bg flex flex-col justify-center px-8 md:hidden"
           >
-            <ul className="flex flex-col gap-2">
-              {links.map((l, i) => (
-                <motion.li
-                  key={l.href}
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + i * 0.06, duration: 0.4 }}
-                >
-                  <a
-                    href={l.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="font-display text-5xl py-2 inline-block"
+            <nav aria-label="Mobile">
+              <ul className="flex flex-col gap-2">
+                {links.map((l, i) => (
+                  <motion.li
+                    key={l.href}
+                    initial={{ opacity: 0, y: 24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15 + i * 0.06, duration: 0.4 }}
                   >
-                    {l.label}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
+                    <a
+                      href={l.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="font-display text-4xl sm:text-5xl py-2 inline-block"
+                    >
+                      {l.label}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
 
             <motion.a
               href={withBasePath("/#contact")}

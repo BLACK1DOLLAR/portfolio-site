@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
 import { JOB_TITLE } from "@/lib/site";
 
@@ -13,13 +13,15 @@ const slides = [
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reduceMotion) return;
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
     }, 6000);
     return () => clearInterval(id);
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <section id="top" className="relative min-h-[78svh] md:min-h-[100svh] w-full overflow-hidden grain">
