@@ -12,14 +12,14 @@ export default function Projects() {
     active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section id="work" className="relative bg-bg py-28 md:py-36 px-6 md:px-10">
+    <section id="work" className="relative bg-bg-alt border-y border-line py-28 md:py-36 px-6 md:px-10">
       <GradientSeam color="rgba(255,90,43,0.5)" flip />
 
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
           <div>
             <span className="uppercase tracking-[0.3em] text-xs text-accent">
-              Selected Work
+              Client Sites
             </span>
             <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-2xl text-balance">
               Eight live builds, shipped for real businesses.

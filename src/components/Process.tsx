@@ -43,7 +43,7 @@ function StackCard({ step, i }: { step: (typeof steps)[number]; i: number }) {
     >
       <motion.div
         style={{ scale, opacity }}
-        className="w-full max-w-5xl mx-auto border border-line bg-bg p-10 md:p-16 grid md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start shadow-[0_40px_80px_-40px_rgba(0,0,0,0.6)]"
+        className="w-full max-w-5xl mx-auto border border-line bg-bg-alt p-10 md:p-16 grid md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start shadow-[0_40px_80px_-40px_rgba(0,0,0,0.6)]"
       >
         <span className="font-display text-7xl md:text-8xl text-accent">{step.n}</span>
         <div>
@@ -57,7 +57,7 @@ function StackCard({ step, i }: { step: (typeof steps)[number]; i: number }) {
 
 export default function Process() {
   return (
-    <section id="process" className="relative bg-bg-alt border-y border-line">
+    <section id="process" className="relative bg-bg">
       <div className="px-6 md:px-10 pt-28 md:pt-36 pb-10 max-w-7xl mx-auto">
         <span className="uppercase tracking-[0.3em] text-xs text-accent">How I Work</span>
         <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-2xl text-balance">

@@ -13,7 +13,7 @@ export default function ProjectCard({ project, i }: { project: Project; i: numbe
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7, delay: (i % 2) * 0.08, ease: "easeOut" }}
-      className="group relative border border-line bg-bg-alt overflow-hidden"
+      className="group relative border border-line bg-bg overflow-hidden"
     >
       <a
         href={project.url}

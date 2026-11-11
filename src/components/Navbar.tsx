@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import MagneticButton from "./MagneticButton";
 
 const links = [
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
   { label: "Systems", href: "#systems" },
   { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
+  { label: "Client Sites", href: "#work" },
+  { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
 
