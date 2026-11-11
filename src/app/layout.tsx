@@ -19,9 +19,9 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sylvanus Ikechukwu — Full-Stack Web Developer",
+  title: "Sylvanus Ikechukwu Augustine | Full-Stack & AI Systems Engineer",
   description:
-    "Full-stack web developer building fast, config-driven websites for small businesses — pharmacies, gadget stores, beauty studios, and more.",
+    "Full-stack & AI systems engineer building Node.js, React and PostgreSQL platforms, RAG/LLM pipelines and C#/Unity gameplay systems. Open to remote roles worldwide.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

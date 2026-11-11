@@ -1,11 +1,20 @@
 import MagneticButton from "./MagneticButton";
 import GradientSeam from "./GradientSeam";
+import { withBasePath } from "@/lib/basePath";
+import {
+  EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  RESUME_PATH,
+  WHATSAPP_DIGITS,
+} from "@/lib/site";
 
-const EMAIL = "blackdollarcodes@protonmail.com";
-const WHATSAPP_DIGITS = "2348147590814";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi Sylvanus, I'd like to talk about building a site."
+  "Hi Sylvanus, I saw your portfolio and would like to talk about a role."
 );
+
+const secondaryButton =
+  "px-6 py-4 border border-fg/40 text-fg text-xs sm:text-sm uppercase tracking-widest hover:bg-fg hover:text-ink transition-colors";
 
 export default function Contact() {
   return (
@@ -18,9 +27,9 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <span className="uppercase tracking-[0.3em] text-xs text-accent">Contact</span>
         <h2 className="font-display text-[12vw] md:text-[7vw] leading-[0.95] mt-6 text-balance">
-          Let&apos;s build your
+          Let&apos;s build something
           <br />
-          site<span className="text-accent">.</span>
+          that scales<span className="text-accent">.</span>
         </h2>
 
         <div className="mt-12 flex flex-col items-center gap-6">
@@ -42,8 +51,40 @@ export default function Contact() {
               {EMAIL}
             </MagneticButton>
           </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <MagneticButton
+              as="a"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={secondaryButton}
+            >
+              GitHub ↗
+            </MagneticButton>
+            <MagneticButton
+              as="a"
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={secondaryButton}
+            >
+              LinkedIn ↗
+            </MagneticButton>
+            {/* TODO: add public/resume.pdf — this link 404s until the file exists. */}
+            <a
+              href={withBasePath(RESUME_PATH)}
+              download
+              data-cursor-hover
+              className={secondaryButton}
+            >
+              Download resume ↓
+            </a>
+          </div>
+
           <p className="text-fg-dim text-sm max-w-md">
-            Send a brief — what your business sells, and who buys it. I&apos;ll reply with next steps.
+            Hiring for a full-stack, AI or gameplay role? Send the details and I&apos;ll reply
+            with availability.
           </p>
           <p className="text-fg-dim text-sm max-w-md border-t border-line pt-6">
             Open to full-stack, AI engineering, and contract/full-time remote roles worldwide.

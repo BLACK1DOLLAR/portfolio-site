@@ -79,7 +79,7 @@ export default function Navbar() {
               scrolled ? "border-fg/30" : "border-fg/50"
             } hover:bg-fg hover:text-ink transition-colors`}
           >
-            Let&apos;s Talk
+            Hire me
           </MagneticButton>
 
           <button
@@ -140,7 +140,7 @@ export default function Navbar() {
               transition={{ delay: 0.15 + links.length * 0.06, duration: 0.4 }}
               className="mt-10 inline-flex w-fit px-6 py-4 bg-fg text-ink text-sm uppercase tracking-widest"
             >
-              Let&apos;s Talk
+              Hire me
             </motion.a>
           </motion.div>
         )}

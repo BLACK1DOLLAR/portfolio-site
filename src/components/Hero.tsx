@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MagneticButton from "./MagneticButton";
+import { JOB_TITLE } from "@/lib/site";
 
 const slides = [
   "from-[#1c1330] via-[#0f0c1e] to-[#08080a]",
@@ -39,15 +40,12 @@ export default function Hero() {
 
       <div className="relative z-10 md:min-h-[100svh] flex flex-col justify-center md:justify-end px-6 md:px-10 pt-28 pb-16 md:pt-36 md:pb-28">
         <span className="uppercase tracking-[0.3em] text-xs text-fg-dim mb-6">
-          Full-Stack Web Developer
+          {JOB_TITLE}
         </span>
 
-        <h1 className="font-display text-balance text-[13vw] md:text-[7.5vw] leading-[0.95] tracking-tight">
-          I build sites
-          <br />
-          that <span className="italic font-normal text-accent-2">feel</span> like
-          <br />
-          products.
+        <h1 className="font-display text-balance text-[10vw] md:text-[5.2vw] leading-[0.98] tracking-tight max-w-[18ch]">
+          Engineering high-performance web systems, AI architecture &amp;{" "}
+          <span className="italic font-normal text-accent-2">interactive</span> software.
         </h1>
 
         <p className="mt-8 max-w-2xl text-fg-dim text-base md:text-lg leading-relaxed">
@@ -58,17 +56,17 @@ export default function Hero() {
         <div className="mt-10 flex flex-wrap items-center gap-6">
           <MagneticButton
             as="a"
-            href="#work"
+            href="#systems"
             className="px-7 py-4 bg-fg text-ink text-sm uppercase tracking-widest hover:bg-accent hover:text-fg transition-colors"
           >
-            View Selected Work →
+            View Featured Systems →
           </MagneticButton>
           <a
             href="#contact"
             data-cursor-hover
             className="text-sm uppercase tracking-widest text-fg-dim hover:text-fg transition-colors border-b border-transparent hover:border-fg pb-1"
           >
-            Start a project
+            Contact / Resume
           </a>
         </div>
       </div>
