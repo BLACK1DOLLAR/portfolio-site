@@ -14,6 +14,12 @@ export const metadata: Metadata = {
       "A WhatsApp-accessible medical study copilot built on RAG over medical textbooks, Redis caching and backend LLM inference.",
     url: "/case-studies/ranvier-ai/",
     type: "article",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ranvier AI case study",
+    images: ["/og.png"],
   },
 };
 
