@@ -13,6 +13,7 @@ import {
   JOB_TITLE,
   LINKEDIN_URL,
   NAME,
+  UPWORK_URL,
   SITE_URL,
 } from "@/lib/site";
 
@@ -30,7 +31,7 @@ const body = Inter({
 
 const TITLE = `${NAME} | ${JOB_TITLE}`;
 const DESCRIPTION =
-  "Full-stack & AI systems engineer building Node.js, React and PostgreSQL platforms, RAG/LLM pipelines and C#/Unity gameplay systems. Open to remote roles worldwide.";
+  "Full stack developer building web apps, APIs, Paystack payment platforms and AI chatbots with React, Node.js, Python and PostgreSQL. Available for freelance projects and remote roles.";
 
 // og.png and brand-icon.png are generated at build time by route handlers in this
 // folder. Relative URLs below resolve against metadataBase (which includes
@@ -74,7 +75,7 @@ const personJsonLd = {
   jobTitle: JOB_TITLE,
   url: `${SITE_URL}/`,
   email: `mailto:${EMAIL}`,
-  sameAs: [LINKEDIN_URL, GITHUB_URL],
+  sameAs: [UPWORK_URL, LINKEDIN_URL, GITHUB_URL],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

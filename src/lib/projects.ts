@@ -97,9 +97,9 @@ export const projects: Project[] = [
     name: "NiMSA South East Region",
     category: "Organisation",
     description:
-      "The regional site for the Nigerian Medical Students' Association, South-East zone — 3,500+ students across 13 schools, leadership, events and campaigns.",
-    url: "https://nimsa-se.onrender.com/",
-    tags: ["Full-Stack", "Content Site"],
+      "The official site of the Nigerian Medical Students' Association, South East Region — 3,500+ students across Abia, Anambra, Ebonyi, Enugu and Imo. Leadership, events, bulletin, resources and campaigns, plus member login and join flows.",
+    url: "https://www.nimsase.com.ng/",
+    tags: ["Full-Stack", "Member Auth", "Content Site"],
     gradient: "from-[#131f2e] via-[#16283c] to-[#1c3552]",
     image: "/images/projects/nimsa-southeast.jpg",
     index: "07",

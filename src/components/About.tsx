@@ -10,13 +10,14 @@ export default function About() {
         <span className="uppercase tracking-[0.3em] text-xs text-accent">About</span>
 
         <TextReveal
-          text="I'm Sylvanus Ikechukwu Augustine — a full-stack and AI systems engineer and medical student, bringing medical-science rigour to backends, LLM pipelines and real-time platforms."
+          text="I'm Sylvanus Ikechukwu Augustine — a full stack developer and medical student in Awka, Nigeria, building web apps, APIs, payment platforms and AI chatbots."
           className="font-display text-3xl md:text-5xl leading-[1.15] mt-6 max-w-4xl text-balance text-fg-dim"
         />
 
         <p className="mt-10 max-w-3xl text-fg-dim text-base md:text-lg leading-relaxed">
           I&apos;m an MBBS student at Chukwuemeka Odumegwu Ojukwu University (COOU), and I
-          build Ranvier AI, an AI-assisted study copilot for medical trainees. As Director of
+          build Ranvier AI, an AI-assisted study copilot for medical trainees, and I&apos;m on the
+          team building CoverMe for the IntroTech Buildathon 2026. As Director of
           ICT for the NIMSA South East Regional Executive Council, I run the region&apos;s
           digital infrastructure: the web portal, member databases and dues and voting systems
           for 19 medical-student chapters.
@@ -27,7 +28,7 @@ export default function About() {
             ["19", "Regional chapters served"],
             ["3,500+", "Students on NIMSA SE"],
             ["50,000+", "Verified votes processed"],
-            ["3", "Stacks: web, AI & Unity"],
+            ["30+", "Hours a week available"],
           ].map(([stat, label]) => (
             <div key={label}>
               <div className="font-display text-4xl md:text-5xl">{stat}</div>

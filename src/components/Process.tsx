@@ -6,23 +6,23 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 const steps = [
   {
     n: "01",
-    title: "Discovery call",
-    body: "I talk through what the business actually needs — products, services, the one action you want a visitor to take. No templates pitched until I understand the client.",
+    title: "A concrete plan",
+    body: "Send me your project and I reply with a concrete plan: what gets built, in what order, and how long it takes. If there's a simpler way to get what you need, I'll tell you.",
   },
   {
     n: "02",
-    title: "Config, not chaos",
-    body: "Content, prices, colors and copy go into a single config file. The layout is proven — what changes per client is data, not code, so nothing breaks on delivery.",
+    title: "One owner, end to end",
+    body: "Frontend, backend, database, payments and deployment. You work with one developer who owns the whole product, so nothing falls between the cracks.",
   },
   {
     n: "03",
-    title: "Build & preview",
-    body: "A live preview link goes out within days, not weeks. I test every button, every link, on a real phone, before anything is called finished.",
+    title: "Working demos at every stage",
+    body: "You see a working demo at every stage, not just at the end, with plain-English updates and no jargon. I test every flow on a real phone before anything is called finished.",
   },
   {
     n: "04",
-    title: "Ship & support",
-    body: "The site goes live on a fast static host. I stay reachable after launch — small edits are quick, and the client always knows where their content lives.",
+    title: "Ship & clean handover",
+    body: "The product goes live and you get tidy code and documentation. I stay reachable after launch, and later fixes don't break what already works.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function Process() {
       <div className="px-6 md:px-10 pt-28 md:pt-36 pb-10 max-w-7xl mx-auto">
         <span className="uppercase tracking-[0.3em] text-xs text-accent">How I Work</span>
         <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-2xl text-balance">
-          Four steps from brief to live site.
+          Four steps from brief to live product.
         </h2>
       </div>
       {steps.map((step, i) => (

@@ -6,30 +6,31 @@ import GradientSeam from "./GradientSeam";
 const groups = [
   {
     n: "01",
-    title: "Languages",
-    items: ["JavaScript (ES6+)", "TypeScript", "Python", "C#", "SQL", "HTML5/CSS3"],
+    title: "Frontend",
+    items: ["React", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     n: "02",
-    title: "Backend & Cloud",
+    title: "Backend & Database",
     items: [
       "Node.js",
       "Express.js",
+      "Python",
+      "REST APIs",
       "PostgreSQL",
       "Redis",
-      "REST APIs",
-      "PaaS Deployments (Render, Vercel)",
+      "Deployment (Render, Vercel)",
     ],
   },
   {
     n: "03",
-    title: "AI & LLM Systems",
-    items: ["RAG Architecture", "Vector Indexing", "Prompt Engineering", "API Pipeline Optimization"],
+    title: "Payments & Integrations",
+    items: ["Paystack", "Payment Gateway Integration", "Webhooks", "Third-Party APIs", "WhatsApp Bots"],
   },
   {
     n: "04",
-    title: "Frontend & UI",
-    items: ["React.js", "Tailwind CSS", "Modern Responsive Web Design"],
+    title: "AI & LLM",
+    items: ["LLM Integrations", "RAG", "Chatbot Development", "Gen AI Applications", "Prompt Engineering"],
   },
 ];
 

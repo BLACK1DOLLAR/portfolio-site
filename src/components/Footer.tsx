@@ -1,6 +1,7 @@
-import { BRAND, EMAIL, GITHUB_URL, LINKEDIN_URL, NAME } from "@/lib/site";
+import { BRAND, EMAIL, GITHUB_URL, LINKEDIN_URL, NAME, UPWORK_URL } from "@/lib/site";
 
 const links = [
+  { label: "Upwork", href: UPWORK_URL, external: true },
   { label: "GitHub", href: GITHUB_URL, external: true },
   { label: "LinkedIn", href: LINKEDIN_URL, external: true },
   { label: "Email", href: `mailto:${EMAIL}`, external: false },

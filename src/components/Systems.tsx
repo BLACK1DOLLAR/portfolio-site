@@ -51,26 +51,25 @@ const systems: System[] = [
     gradient: "from-[#132018] via-[#0d1612] to-[#08080a]",
     links: [
       { label: "Repo", href: "" }, // TODO: portal repo URL (or leave empty if private)
-      { label: "Demo", href: "" }, // TODO: live portal URL — confirm whether https://nimsa-se.onrender.com/ is this portal
+      { label: "Demo", href: "https://www.nimsase.com.ng/" },
       { label: "Write-up", href: "" }, // TODO: write-up URL
     ],
   },
   {
     index: "03",
-    category: "Gameplay & Interactive Engineering",
-    name: "Interactive 3D Systems & Game Engines",
+    category: "Health-Tech · In progress",
+    name: "CoverMe",
     summary:
-      "Three 3D game prototypes in Unity with custom C# scripts for character controllers, state machines, combat mechanics and physics, plus scene organisation, input mapping and event-driven game logic.",
+      "An app that helps Nigerian NHIA and HMO enrollees understand what their health plan actually covers, and file a complaint when care is denied. Being built with a team for the IntroTech Buildathon 2026.",
     stats: [
-      ["3", "Unity 3D prototypes"],
-      ["Event-driven", "State machines"],
+      ["NHIA & HMO", "Plan coverage, explained"],
+      ["2026", "IntroTech Buildathon"],
     ],
-    tags: ["C#", "Unity 3D", "Git", "Physics Systems"],
+    tags: ["Full-Stack", "Health-Tech", "Team Build"],
     gradient: "from-[#2a1710] via-[#170f0c] to-[#08080a]",
     links: [
-      { label: "Repo", href: "" }, // TODO: Unity prototypes repo URL
-      { label: "Demo", href: "" }, // TODO: gameplay video / WebGL build URL
-      { label: "Write-up", href: "" }, // TODO: write-up URL
+      { label: "Repo", href: "" }, // TODO: CoverMe repo URL (or leave empty if private)
+      { label: "Demo", href: "" }, // TODO: CoverMe demo URL once live
     ],
   },
 ];
@@ -86,11 +85,11 @@ export default function Systems() {
             Featured Systems
           </span>
           <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-3xl text-balance">
-            AI architecture, full-stack platforms &amp; interactive software.
+            AI products, payment-ready platforms &amp; health-tech.
           </h2>
           <p className="text-fg-dim text-base md:text-lg leading-relaxed mt-6 max-w-2xl">
-            Beyond client sites: the engineering work behind low-latency products,
-            payment-ready platforms and real-time 3D.
+            Recent products built end to end: a WhatsApp AI study assistant, a Paystack-backed
+            association portal, and an app for health-plan enrollees.
           </p>
         </div>
 

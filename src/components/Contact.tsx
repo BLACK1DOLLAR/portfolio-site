@@ -6,11 +6,12 @@ import {
   GITHUB_URL,
   LINKEDIN_URL,
   RESUME_PATH,
+  UPWORK_URL,
   WHATSAPP_DIGITS,
 } from "@/lib/site";
 
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi Sylvanus, I saw your portfolio and would like to talk about a role."
+  "Hi Sylvanus, I saw your portfolio and would like to talk about a project."
 );
 
 const secondaryButton =
@@ -55,6 +56,15 @@ export default function Contact() {
           <div className="flex flex-wrap justify-center items-center gap-4">
             <MagneticButton
               as="a"
+              href={UPWORK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={secondaryButton}
+            >
+              Upwork ↗
+            </MagneticButton>
+            <MagneticButton
+              as="a"
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -82,11 +92,10 @@ export default function Contact() {
           </div>
 
           <p className="text-fg-dim text-sm max-w-md">
-            Hiring for a full-stack, AI or gameplay role? Send the details and I&apos;ll reply
-            with availability.
+            Send me a message with your project and I&apos;ll reply with a concrete plan.
           </p>
           <p className="text-fg-dim text-sm max-w-md border-t border-line pt-6">
-            Open to full-stack, AI engineering, and contract/full-time remote roles worldwide.
+            Available 30+ hours a week for freelance projects and remote full-stack roles.
           </p>
         </div>
       </div>

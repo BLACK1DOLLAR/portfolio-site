@@ -47,7 +47,7 @@ export function GET() {
             {NAME}
           </div>
           <div style={{ display: "flex", marginTop: 28, fontSize: 34, color: "#a8a5a0" }}>
-            Node.js · React · PostgreSQL · RAG / LLM pipelines · C# / Unity
+            React · Node.js · Python · PostgreSQL · APIs · AI chatbots
           </div>
         </div>
         <div

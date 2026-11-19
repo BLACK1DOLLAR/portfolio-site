@@ -1,14 +1,14 @@
 const items = [
   "React",
-  "Next.js",
   "TypeScript",
-  "Tailwind CSS",
   "Node.js",
-  "Framer Motion",
+  "Python",
   "PostgreSQL",
-  "REST & GraphQL APIs",
-  "Static Site Export",
-  "UI/UX Craft",
+  "Redis",
+  "REST APIs",
+  "Paystack",
+  "WhatsApp Bots",
+  "LLMs & RAG",
 ];
 
 export default function Marquee() {

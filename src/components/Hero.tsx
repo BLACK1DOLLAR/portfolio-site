@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
-import { JOB_TITLE } from "@/lib/site";
+import { JOB_TITLE, UPWORK_URL } from "@/lib/site";
 
 const slides = [
   "from-[#1c1330] via-[#0f0c1e] to-[#08080a]",
@@ -46,13 +46,14 @@ export default function Hero() {
         </span>
 
         <h1 className="font-display text-balance text-[10vw] md:text-[5.2vw] leading-[0.98] tracking-tight max-w-[18ch]">
-          Engineering high-performance web systems, AI architecture &amp;{" "}
-          <span className="italic font-normal text-accent-2">interactive</span> software.
+          Web apps, APIs, payment platforms &amp;{" "}
+          <span className="italic font-normal text-accent-2">chatbots</span>, built end to end.
         </h1>
 
         <p className="mt-8 max-w-2xl text-fg-dim text-base md:text-lg leading-relaxed">
-          Full-Stack Developer &amp; AI Systems Engineer specializing in Node.js, React,
-          PostgreSQL, LLM pipelines, and resilient backend microservices.
+          I handle frontend, backend, database and deployment, so you work with one developer
+          who owns your product from start to finish. React, Node.js, Python, PostgreSQL, Paystack
+          and LLM/RAG integrations.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -61,14 +62,16 @@ export default function Hero() {
             href="#systems"
             className="px-7 py-4 bg-fg text-ink text-sm uppercase tracking-widest hover:bg-accent hover:text-fg transition-colors"
           >
-            View Featured Systems →
+            View Featured Work →
           </MagneticButton>
           <a
-            href="#contact"
+            href={UPWORK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             data-cursor-hover
             className="text-sm uppercase tracking-widest text-fg-dim hover:text-fg transition-colors border-b border-transparent hover:border-fg pb-1"
           >
-            Contact / Resume
+            Hire me on Upwork ↗
           </a>
         </div>
       </div>
