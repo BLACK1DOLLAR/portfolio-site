@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import GradientSeam from "./GradientSeam";
 import { withBasePath } from "@/lib/basePath";
 
@@ -10,6 +11,10 @@ type System = {
   index: string;
   category: string;
   name: string;
+  /** Short name typed large across the card banner. */
+  wordmark: string;
+  /** Optional screenshot (path under /public); the wordmark sits over it. */
+  image?: string;
   summary: string;
   stats: [string, string][];
   tags: string[];
@@ -23,6 +28,7 @@ const systems: System[] = [
     index: "01",
     category: "AI / ML Engineering",
     name: "Ranvier AI",
+    wordmark: "Ranvier AI",
     summary:
       "WhatsApp-accessible medical study copilot: textbook summaries, detailed explanations and multiple-choice drills, served by backend LLM inference with structured RAG retrieval over medical textbooks and a Redis cache for sub-second responses.",
     stats: [
@@ -41,6 +47,8 @@ const systems: System[] = [
     index: "02",
     category: "Full-Stack Web Architecture",
     name: "NIMSA South East Regional Portal & Voting Engine",
+    wordmark: "NIMSA South East",
+    image: "/images/projects/nimsa-southeast.jpg",
     summary:
       "The official regional portal for the Nigerian Medical Students' Association, South East, across 19 university chapters, with Paystack-backed member verification and dues collection, and a live-election voting engine with real-time leaderboards.",
     stats: [
@@ -59,6 +67,7 @@ const systems: System[] = [
     index: "03",
     category: "Health-Tech · In progress",
     name: "CoverMe",
+    wordmark: "CoverMe",
     summary:
       "An app that helps Nigerian NHIA and HMO enrollees understand what their health plan actually covers, and file a complaint when care is denied. Being built with a team for the IntroTech Buildathon 2026.",
     stats: [
@@ -76,6 +85,7 @@ const systems: System[] = [
     index: "04",
     category: "Workflow Automation",
     name: "FlowOps",
+    wordmark: "FlowOps",
     summary:
       "A visual workflow-automation builder: chain webhook, cron and manual triggers with branching, loops, waits, custom JavaScript and LLM steps (Anthropic, OpenAI-compatible or Gemini). Credentials are encrypted on the server, and every save is kept as a restorable version.",
     stats: [
@@ -121,10 +131,26 @@ export default function Systems() {
               transition={{ duration: 0.7, delay: i * 0.08, ease: "easeOut" }}
               className="group relative flex flex-col border border-line bg-bg-alt overflow-hidden"
             >
-              <div className={`relative h-40 w-full overflow-hidden bg-gradient-to-br ${s.gradient}`}>
+              <div className={`relative h-52 w-full overflow-hidden bg-gradient-to-br ${s.gradient}`}>
+                {s.image && (
+                  <Image
+                    src={withBasePath(s.image)}
+                    alt={`Screenshot of ${s.name}`}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,90,43,0.18),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(201,255,91,0.10),transparent_50%)] transition-transform duration-700 ease-out group-hover:scale-110" />
-                <span className="absolute top-5 left-5 font-display text-6xl text-white/20 drop-shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <span className="absolute top-5 left-5 font-display text-2xl text-white/50 drop-shadow-lg">
                   {s.index}
+                </span>
+                <span
+                  aria-hidden
+                  className="absolute bottom-5 left-5 right-5 font-display text-4xl md:text-5xl leading-none tracking-tight text-white drop-shadow-lg text-balance"
+                >
+                  {s.wordmark}
                 </span>
                 <span className="absolute top-5 right-5 max-w-[60%] text-right text-[10px] uppercase tracking-widest px-3 py-1 border border-white/40 text-white bg-black/30 backdrop-blur-sm">
                   {s.category}
