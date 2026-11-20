@@ -72,6 +72,23 @@ const systems: System[] = [
       { label: "Demo", href: "" }, // TODO: CoverMe demo URL once live
     ],
   },
+  {
+    index: "04",
+    category: "Workflow Automation",
+    name: "FlowOps",
+    summary:
+      "A visual workflow-automation builder: chain webhook, cron and manual triggers with branching, loops, waits, custom JavaScript and LLM steps (Anthropic, OpenAI-compatible or Gemini). Credentials are encrypted on the server, and every save is kept as a restorable version.",
+    stats: [
+      ["AES-256-GCM", "Encrypted credentials"],
+      ["50", "Versions kept per workflow"],
+    ],
+    tags: ["React", "Webhooks", "Cron", "LLM Nodes", "Sandboxed JS"],
+    gradient: "from-[#2e1a1a] via-[#3a201c] to-[#08080a]",
+    links: [
+      { label: "Repo", href: "" }, // TODO: FlowOps repo URL (or leave empty if private)
+      { label: "Demo", href: "https://flowops-dzsr.onrender.com/" },
+    ],
+  },
 ];
 
 export default function Systems() {
@@ -85,15 +102,16 @@ export default function Systems() {
             Featured Systems
           </span>
           <h2 className="font-display text-4xl md:text-6xl mt-4 max-w-3xl text-balance">
-            AI products, payment-ready platforms &amp; health-tech.
+            AI products, payment-ready platforms &amp; workflow automation.
           </h2>
           <p className="text-fg-dim text-base md:text-lg leading-relaxed mt-6 max-w-2xl">
             Recent products built end to end: a WhatsApp AI study assistant, a Paystack-backed
-            association portal, and an app for health-plan enrollees.
+            association portal, a workflow-automation builder, and an app for health-plan
+            enrollees.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {systems.map((s, i) => (
             <motion.article
               key={s.name}
